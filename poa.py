@@ -16,7 +16,7 @@ def process(cookie):
                 #d = cookie
                 d[7] = chr(char)
                 bc = urllib.quote(base64.b64encode("".join(d)))
-                r = req.get("http://ptl-c3cd197b-59238793.libcurl.so/index.php",cookies={'auth':bc})
+                r = req.get("",cookies={'auth':bc})
                 if len(r.text) != 15:
                         print str(char)+"\t"+bc+"\t"+str(len(r.text))
         return
