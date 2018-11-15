@@ -5,6 +5,7 @@ import requests as req
 import re
 
 URL = "http://REDACTED/"
+PATTERN = "search=admin"
 FORMAT = "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX"
 alpha = "abcdef0123456789"
 password = ""
