@@ -1,4 +1,4 @@
-!/bin/python
+#!/bin/python
 # Converter of strings to CharCode JavaScript
 # 0xAdrian
 
